@@ -1,4 +1,4 @@
-require('dotenv/config')
+require('dotenv').config()
 const TextToSpeechV1 = require('ibm-watson/text-to-speech/v1');
 const { IamAuthenticator } = require('ibm-watson/auth');
 
@@ -6,9 +6,9 @@ const { IamAuthenticator } = require('ibm-watson/auth');
 module.exports = async function (text) {
     const textToSpeech = new TextToSpeechV1({
         authenticator: new IamAuthenticator({
-          apikey: "fW5pbnj2lMXHhXtL_AgG08dF8Rw50b07K8yTkw-wZ7NN",
+          apikey: process.env.APIKEY,
         }),
-        serviceUrl: "https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/aa3722fc-e1ca-47cc-be86-a4b6f78f1412"
+        serviceUrl: process.env.APIURL,
     });
 
     const synthesizeParams = {
