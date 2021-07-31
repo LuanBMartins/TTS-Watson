@@ -1,12 +1,12 @@
 const textData = require('../data/textData')
 const textToSpeech = require('./TTSconfig')
 
-exports.findAll = async function() {
+exports.findAll = function() {
     return textData.findAll()
 }
 
 exports.create = async function(text) {
-    //Buffer do áudio é convertido para Json.
+    //Buffer do áudio é convertido em Json e armazenando no banco.
     const audio = (await textToSpeech(text)).toJSON()
     return textData.create({message: text, song: audio})
 }

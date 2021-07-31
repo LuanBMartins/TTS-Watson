@@ -20,7 +20,7 @@ Route.delete('/api/audios', async (req, res) => {
     res.status(204).end()
 })
 
-// Rota para retornar um Buffer do texto
+// Rota para retornar o Buffer do texto
 Route.get('/api/audios/:id', async (req, res) => {
     const id = req.params.id
     const audio = await textService.findOne(id)
