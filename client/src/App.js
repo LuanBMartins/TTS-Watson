@@ -1,9 +1,10 @@
 import React from 'react'
+import Tts from './page/tts'
 
 
 const App = () => {
     return <div>
-        OK
+        <Tts/>
     </div>
 }
 
