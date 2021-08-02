@@ -21,7 +21,7 @@ No lado direito temos a funcionalidade para ouvir ou deleter os áudios gerados.
 <li>Axios</li>
 </ul>
 
-## Instruçõees para executar o projeto
+## Instruções para executar o projeto
 ### 1) Clone o projeto em uma pasta.
 `git clone https://github.com/LuanBMartins/TTS-Watson.git`
 ### 2) Entre na pasta raiz do projeto.
@@ -35,14 +35,14 @@ Termine de configurar criando um arquivo .env ainda neste diretório do projeto 
 ```
 APIKEY="SuaChaveTTSWatsonDaIBM"
 APIURL="URLTTSWatsonDaIBM"
-DATABASE=BancoDeDados
+DATABASE=BaseDeDados
 DB_USER=Usuário
 DB_PASS=Senha
 ```
 
 ```diff
-- Obs: É necessário já ter o MySQL já configurado e uma base de dados definida, não se preocupe com a criação da tabela. <br>
-! Em caso de dúvidas acesse: https://www.mysql.com/
+- Obs: É necessário já ter o MySQL configurado e uma base de dados definida, não se preocupe com a criação da tabela. <br>
+! Em caso de dúvidas sobre MySQL, acesse: https://www.mysql.com/
 ```
 
 INICIE O SERVIDOR: `npm start`
