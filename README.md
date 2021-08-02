@@ -2,6 +2,14 @@
 
 Software responsável por converter textos em áudios e reproduzi-los
 
+## Interface
+<p align="center">
+  <img src="./static/tts.png" width="350" title="hover text">
+</p>
+
+No lado esquerdo encontramos a funcionalidade para gerar os áudios, é importante informar que esta funcionalidade possui um pequeno delay, logo não se preocupe caso não gere imediatamente. <br>
+No lado direito temos a funcionalidade para ouvir ou deleter os áudios gerados. <br>
+
 ## Tecnologias utilizadas
 <ul>
 <li>Nodejs</li>
@@ -34,19 +42,23 @@ DB_PASS=Senha
 
 ```diff
 - Obs: É necessário já ter o MySQL já configurado e uma base de dados definida, não se preocupe com a criação da tabela. <br>
+! Em caso de dúvidas acesse: https://www.mysql.com/
 ```
 
 INICIE O SERVIDOR: `npm start`
 #### Cliente (client)
-Retorne para a pasta raiz e realize os seguintes passos: <br>
+Abra um novo terminal e mantenha o anterior ativado. <br>
+Estando na pasta raiz, realize os seguintes passos: <br>
 1° `cd client` <br>
 2° `npm i` <br>
+Alguns avisos de dependencias desatualizadas podem acontecer! <br>
 INICIE O CLIENTE: `npm start` <br>
 
 ```diff
 - Obs: Por motivos de o servidor já estar rodando na porta 3000 o React irá sugerir rodar em outra porta, basta aceitar "y" e a interface será aberta no navegador.
-
 ```
+
+
 
 <br><br>
 Em casos de dúvidas, envie email para: carlosbm.luan@gmail.com
