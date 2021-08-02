@@ -31,11 +31,22 @@ DATABASE=BancoDeDados
 DB_USER=Usuário
 DB_PASS=Senha
 ```
-obs: É necessário já ter o MySQL já configurado e uma base de dados definida, não se preocupe com a criação da tabela. <br>
+
+```diff
+- Obs: É necessário já ter o MySQL já configurado e uma base de dados definida, não se preocupe com a criação da tabela. <br>
+```
+
 INICIE O SERVIDOR: `npm start`
 #### Cliente (client)
 Retorne para a pasta raiz e realize os seguintes passos: <br>
 1° `cd client` <br>
 2° `npm i` <br>
 INICIE O CLIENTE: `npm start` <br>
-Obs: Por motivos de o servidor já estar rodando na porta 3000 o React irá sugerir rodar em outra porta, basta aceitar "y" e a interface será aberta no navegador.
+
+```diff
+- Obs: Por motivos de o servidor já estar rodando na porta 3000 o React irá sugerir rodar em outra porta, basta aceitar "y" e a interface será aberta no navegador.
+
+```
+
+<br><br>
+Em casos de dúvidas, envie email para: carlosbm.luan@gmail.com
