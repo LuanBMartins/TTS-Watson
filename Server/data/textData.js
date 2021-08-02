@@ -12,8 +12,8 @@ exports.create = function(text) {
     return Text.create(text, {raw: true})
 }
 
-exports.delete = function(text) {
+exports.delete = function(id) {
     return Text.destroy({
-        where: text
+        where: id
     })
 }

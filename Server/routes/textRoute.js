@@ -14,9 +14,9 @@ Route.post('/api/audios', async (req, res) => {
     res.status(201).send(message)
 })
 
-Route.delete('/api/audios', async (req, res) => {
-    const text = req.body.text
-    await textService.delete(text)
+Route.delete('/api/audios/:id', async (req, res) => {
+    const id = req.params.id
+    await textService.delete(id)
     res.status(204).end()
 })
 
