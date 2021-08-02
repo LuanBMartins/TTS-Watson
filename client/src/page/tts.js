@@ -49,7 +49,7 @@ const Tts = () => {
             <form action="">
                 <label htmlFor='comentario'> <h2>Comentario</h2> </label><br></br>
                 <textarea id="text" placeholder="Digite aqui" value={text} onChange={handleChange} /><br></br>
-                <button type="button" onClick={handleClick}>Cadastrar</button>
+                <button type="button" onClick={handleClick}>Gerar Audio</button>
             </form>
 
             <div class="songs">
