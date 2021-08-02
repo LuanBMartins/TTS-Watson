@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import "./style.css"
 
 const Tts = () => {
     const [comment, setComment] = useState([])
@@ -26,6 +27,8 @@ const Tts = () => {
         audio.play()
     }
 
+
+
     const handleClickDelete = async (event) => {
         const [message] = comment.filter(item => item.id === Number(event.target.id))
         await request('delete',`http://localhost:3000/api/audios/${message.id}`)
@@ -40,23 +43,28 @@ const Tts = () => {
     }
 
     return (
-        <div>
+        <section>
+            <h1>Text To Speech</h1>
+            <div class="flex">
             <form action="">
-                <label htmlFor='comentario'> Comentario</label><br></br>
+                <label htmlFor='comentario'> <h2>Comentario</h2> </label><br></br>
                 <textarea id="text" placeholder="Digite aqui" value={text} onChange={handleChange} /><br></br>
-                <button type="button" onClick={handleClick}>Gerar audio</button>
+                <button type="button" onClick={handleClick}>Cadastrar</button>
             </form>
 
-            <div>
+            <div class="songs">
+                <h2>Comentários</h2>
                {comment.map(item => {
-                   return <li key={item.id}>
-                       {item.message} 
-                       <button id={item.id} onClick={handleClickDelete}>Deletar</button>
-                       <button id={item.id} onClick={audioPlay}>Tocar</button>
+                   return <li key={item.id} class="comments">
+                       <li>{item.message}</li>
+                       <button class="delete"id={item.id} onClick={handleClickDelete}>Deletar</button>
+                       <button id={item.id} onClick={audioPlay}>Ouvir Audio</button>
                    </li>
                })}
             </div>
-        </div>
+
+            </div>
+        </section>
     )
 }
 
